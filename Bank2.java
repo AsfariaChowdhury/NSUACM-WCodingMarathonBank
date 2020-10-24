@@ -26,7 +26,7 @@ public class Bank2 extends Balance {
         LOG("Do you want to:");
         LOG("(1) Change PIN\n(2) Change Email\n(3) Change Mobile Number");
         LOG("(4) Change Home Address\n(5) Withdraw\n(6) Deposit");
-        LOG("(7) Check Transaction\n(8) Exit");
+        LOG("(7) Check Transaction\n(8) Exit\n(9) Check Balance");
         
         Scanner numInput = new Scanner(System.in);
         int menuInput = numInput.nextInt();
@@ -34,47 +34,51 @@ public class Bank2 extends Balance {
         switch(menuInput){
             case 1:
                 obj.changePIN();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 2:
                 obj.updateEmail();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 3:
                 obj.updateMobile();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 4:
                 obj.updateAddress();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 5:
                 obj.account_withdraw();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 6:
                 obj.account_deposit();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 7:
                 obj.account_balance();
-                numInput.close();
+                //numInput.close();
                 menu(obj);
                 break;
             case 8:
-                numInput.close();
+                //numInput.close();
                 System.exit(0);
+                break;
+            case 9:
+                obj.account_balance();
+                menu(obj);
                 break;
             default:
                 LOG("You have used wrong input.");
                 LOG("Please enter again.");
-                numInput.close();
+                //numInput.close();
                 menu(obj);
         }
         
