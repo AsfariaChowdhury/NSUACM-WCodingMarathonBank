@@ -82,7 +82,7 @@ public class Balance extends Account {
             else{
                 withdraw = userWithdraw;
                 LOG("You have successfully withdrawn Tk " + withdraw + ".");
-                numInput.close();
+                //numInput.close();
                 updateBalance(userWithdraw);
             }
         }
@@ -97,7 +97,7 @@ public class Balance extends Account {
         double userDeposit = numInput.nextDouble();
         deposit = userDeposit;
         LOG("You have successfully deposited Tk " + deposit + ".");
-        numInput.close();
+        //numInput.close();
         updateBalance();
     }
     
