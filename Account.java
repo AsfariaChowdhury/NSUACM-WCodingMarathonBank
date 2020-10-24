@@ -69,7 +69,7 @@ public abstract class Account extends User {
                 setUserPIN();   //recursion
             }
             else{
-                stringInput.close();
+                //stringInput.close();
                 setPIN(userPIN);    //PIN is correct, so set it to private attribute of User class
                 setOldPIN(userPIN); //setUserPIN method is used only for new account creation
                 //when the pin is changed for the first time, the very first created PIN is accessed as old PIN
@@ -141,7 +141,7 @@ public abstract class Account extends User {
                 login();   //recursion
             }
             else{
-                numInput.close();
+                //numInput.close();
                 enterPIN(userAccount_no);
             }
         }
@@ -171,7 +171,7 @@ public abstract class Account extends User {
             }
             else{
                 LOG("You've successfully logged in.");
-                stringInput.close();
+                //stringInput.close();
             }
         }
         
@@ -219,7 +219,7 @@ public abstract class Account extends User {
             else{
                 setPIN(userPIN);
                 LOG("PIN has been successfully changed!");
-                stringInput.close();
+                //stringInput.close();
             }
         }
     }
@@ -229,7 +229,7 @@ public abstract class Account extends User {
         LOG("Please enter new email address.");
         String userEmail = stringInput.nextLine();
         setEmail(userEmail);
-        stringInput.close();
+        //stringInput.close();
     }
     
     public void updateMobile(){
@@ -237,7 +237,7 @@ public abstract class Account extends User {
         LOG("Please enter a new mobile number.");
         String userMobile = stringInput.nextLine();
         setMobile(userMobile);
-        stringInput.close();
+        //stringInput.close();
     }
     
     public void updateAddress(){
@@ -245,7 +245,7 @@ public abstract class Account extends User {
         LOG("Please enter a new house address.");
         String userAddress = stringInput.nextLine();
         setAddress(userAddress);
-        stringInput.close();
+        //stringInput.close();
     }
     
     
